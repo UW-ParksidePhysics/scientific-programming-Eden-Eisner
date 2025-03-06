@@ -15,7 +15,7 @@ def sort_by_ith_element(a, b, sort_index):
 
 if __name__ == "__main__" :
     nearby_star_data = [
-        # Name, Distance from sum[Ly], Apparent Brightness, Luminositys
+        # Name, Distance from sum[Ly], Apparent Brightness, Luminosity
         ('Alpha Centauri A', 4.3, 0.26, 1.56),
         ('Alpha Centauri B', 4.3, 0.077, 0.45),
         ('Alpha Centauri C', 4.2, 0.00001, 0.00006),

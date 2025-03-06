@@ -1,17 +1,17 @@
-Partner:
+Partner: instructor
 
 What Went Well
 ---
-
+Text was pre-written; following instructions
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: Got interrupted by question and git issue
 
-* Communication:
+* Communication: Driver waited patiently for navigator directions
 
-* Pacing:
+* Pacing: Felt fine
 
-* Division of responsibility
+* Division of responsibility: Navigator directed, driver followed
 
-* Code quality:
+* Code quality: We typed what we were told

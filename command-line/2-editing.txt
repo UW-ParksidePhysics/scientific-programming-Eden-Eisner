@@ -1,1 +1,12 @@
+Last login: Wed Mar  5 14:45:41 on ttys000
+parkerw@MAC224008 ~ % cd Documents 
+parkerw@MAC224008 Documents % touch notes.txt
+parkerw@MAC224008 Documents % vi notes.txt
+parkerw@MAC224008 Documents % cat notes.txt 
+This is my first file created in the terminal.
+parkerw@MAC224008 Documents % touch shopping_list.txt
+parkerw@MAC224008 Documents % vi shopping_list.txt 
+parkerw@MAC224008 Documents % cat shopping_list.txt 
+apples, bread, milk, coffee
+parkerw@MAC224008 Documents % 
 

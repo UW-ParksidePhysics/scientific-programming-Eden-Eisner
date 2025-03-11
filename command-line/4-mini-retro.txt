@@ -1,17 +1,17 @@
-Partner:
+Partner: Nate
 
 What Went Well
----
+--- finished Exercise 4.1
 
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: was pretty focus on the problems
 
-* Communication:
+* Communication: Was fine
 
-* Pacing:
+* Pacing: finished 4.1 and got started on 4.2
 
-* Division of responsibility
+* Division of responsibility: responsibility was split evenly
 
-* Code quality:
+* Code quality: Actually know how to input user answers and command line inputs

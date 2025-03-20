@@ -1,17 +1,18 @@
-Partner:
+Partner: Daniel
 
 What Went Well
----
+--- Copy and pasting the given commands and we finished
 
 
 What Would Make Next Time 1% Better
 ---
 * Focus:
-
+actually knowing how to get the file to work and run properly
 * Communication:
-
+had pretty good communication
 * Pacing:
-
+had good pacing
 * Division of responsibility
-
+was pretty slip evenly
 * Code quality:
+was fine

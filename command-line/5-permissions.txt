@@ -1,1 +1,102 @@
+Last login: Thu Mar 20 08:05:34 on console
 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MAC619967:~ eisne003$ cd documants
+-bash: cd: documants: No such file or directory
+MAC619967:~ eisne003$ cd documants
+-bash: cd: documants: No such file or directory
+MAC619967:~ eisne003$ cd documents
+MAC619967:documents eisne003$ mkdir notes.txt
+MAC619967:documents eisne003$ ls -l notes.tst
+ls: notes.tst: No such file or directory
+MAC619967:documents eisne003$ ls -l notes.txt
+total 0
+MAC619967:documents eisne003$ chmod u+x notes.txt
+MAC619967:documents eisne003$ chmod o-r notes.txt
+MAC619967:documents eisne003$ ls -l
+total 0
+drwxr-x--x  2 eisne003  UWP\Domain Users  64 Mar 20 08:30 notes.txt
+MAC619967:documents eisne003$ rmdir notes.txt
+MAC619967:documents eisne003$ echo '#!/bin/sh\necho "Hello, world!"' > script.sh
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: Permission denied
+MAC619967:documents eisne003$ chmod script.sh 7
+chmod: Invalid file mode: script.sh
+MAC619967:documents eisne003$ chmod 7
+usage:	chmod [-fhv] [-R [-H | -L | -P]] [-a | +a | =a  [i][# [ n]]] mode|entry file ...
+	chmod [-fhv] [-R [-H | -L | -P]] [-E | -C | -N | -i | -I] file ...
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: Permission denied
+MAC619967:documents eisne003$ chmod 7 script.sh
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: Permission denied
+MAC619967:documents eisne003$ chmod 755 script.sh
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: /bin/sh\necho: bad interpreter: No such file or directory
+MAC619967:documents eisne003$ sudo chown new_user script.sh
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+sudo: 3 incorrect password attempts
+MAC619967:documents eisne003$ chown new_user script.sh
+chown: new_user: illegal user name
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: /bin/sh\necho: bad interpreter: No such file or directory
+MAC619967:documents eisne003$ ls -l
+total 8
+-rwxr-xr-x  1 eisne003  UWP\Domain Users  32 Mar 20 08:35 script.sh
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: /bin/sh\necho: bad interpreter: No such file or directory
+MAC619967:documents eisne003$ ls -l script.sh
+-rwxr-xr-x  1 eisne003  UWP\Domain Users  32 Mar 20 08:35 script.sh
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: /bin/sh\necho: bad interpreter: No such file or directory
+MAC619967:documents eisne003$ chmod 777 script.sh
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: /bin/sh\necho: bad interpreter: No such file or directory
+MAC619967:documents eisne003$ ls -l script.sh
+-rwxrwxrwx  1 eisne003  UWP\Domain Users  32 Mar 20 08:35 script.sh
+MAC619967:documents eisne003$ sudo chown new_user script.sh
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+sudo: 3 incorrect password attempts
+MAC619967:documents eisne003$ sudo chown eisne003 script.sh
+Password:
+eisne003 is not in the sudoers file.
+This incident has been reported to the administrator.
+MAC619967:documents eisne003$ ./script.sh
+-bash: ./script.sh: /bin/sh\necho: bad interpreter: No such file or directory
+MAC619967:documents eisne003$ ls -l script.sh
+-rwxrwxrwx  1 eisne003  UWP\Domain Users  32 Mar 20 08:35 script.sh
+MAC619967:documents eisne003$ sudo chown eisne003 script.sh
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+sudo: 3 incorrect password attempts
+MAC619967:documents eisne003$ vi script.sh
+MAC619967:documents eisne003$ ./script.sh
+Hello, world!
+MAC619967:documents eisne003$ vi script.sh
+MAC619967:documents eisne003$ rmdir script.sh
+rmdir: script.sh: Not a directory
+MAC619967:documents eisne003$ rm -fv script.sh
+script.sh
+MAC619967:documents eisne003$ ls
+MAC619967:documents eisne003$ ls documents
+ls: documents: No such file or directory
+MAC619967:documents eisne003$ echo '#!/bin/sh\necho "Hello, world!"' > script.sh
+MAC619967:documents eisne003$ ls
+script.sh
+MAC619967:documents eisne003$ rm -fv script.sh
+script.sh
+MAC619967:documents eisne003$ ls
+MAC619967:documents eisne003$

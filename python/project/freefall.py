@@ -44,7 +44,20 @@ def velocity_in_height(height, initial_height=0, initial_velocity=0, gravitation
         return np.sign(initial_velocity) *np.sqrt(initial_velocity ** 2 - 2 * gravitational_acceleration * height_change)
 
 if __name__ == '__main__':
-    test_plot()
+    object_data = {'Earth': 9.8, 'Moon': 1.6, 'Mars': 3.7} # surface gravity [m/s/s]
+    starting_velocity = 10 # m/s
+    times = np.linspace(0, 5)
+    for planet_data in object_data.items():
+        velocities = velocity_in_time(times, initial_velocity=starting_velocity, gravitational_acceleration=planet_data[1])
+        plt.plot(times, velocities, label=planet_data[0])
+
+    plt.text(x=0, y= velocities[-1], s=f'Initial Velocity: {starting_velocity: .0f} m/s')
+    plt.xlabel('Time [s]')
+    plt.ylabel('Velocity [m/s]')
+    plt.legend()
+    plt.show()
+
+    #test_plot()
     starting_velocity = 1
     total_time = 1
 

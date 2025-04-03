@@ -1,17 +1,17 @@
-Partner:
+Partner: Ashton
 
 What Went Well
----
+--- communication
 
 
 What Would Make Next Time 1% Better
----
-* Focus:
+--- Not having so mnay terminals open
+* Focus:good
 
-* Communication:
+* Communication: fine
 
-* Pacing:
+* Pacing: quick
 
-* Division of responsibility
+* Division of responsibility: equal
 
-* Code quality:
+* Code quality: fine

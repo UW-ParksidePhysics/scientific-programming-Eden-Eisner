@@ -1,1 +1,82 @@
-
+MAC619967:~ eisne003$ vi sample.txt
+MAC619967:~ eisne003$ ps
+  PID TTY           TIME CMD
+ 6102 ttys000    0:00.01 -bash
+ 6126 ttys000    0:00.03 vi sample.txt
+ 6134 ttys001    0:00.01 -bash
+MAC619967:~ eisne003$ kill [6126]
+-bash: kill: [6126]: arguments must be process or job IDs
+MAC619967:~ eisne003$ kill [PID]
+-bash: kill: [PID]: arguments must be process or job IDs
+MAC619967:~ eisne003$ kill 6126
+MAC619967:~ eisne003$ jobs
+MAC619967:~ eisne003$ sleep 100 &
+[1] 6325
+MAC619967:~ eisne003$ jobs
+[1]+  Running                 sleep 100 &
+MAC619967:~ eisne003$ fg
+sleep 100
+MAC619967:~ eisne003$ sleep 100 &
+[1] 6300
+MAC619967:~ eisne003$ ping google.com &
+[2] 6377
+[1]   Done                    sleep 100
+MAC619967:~ eisne003$ PING google.com (64.233.185.102): 56 data bytes
+64 bytes from 64.233.185.102: icmp_seq=0 ttl=98 time=26.845 ms
+64 bytes from 64.233.185.102: icmp_seq=1 ttl=98 time=26.955 ms
+64 bytes from 64.233.185.102: icmp_seq=2 ttl=98 time=26.951 ms
+64 bytes from 64.233.185.102: icmp_seq=3 ttl=98 time=26.987 ms
+64 bytes from 64.233.185.102: icmp_seq=4 ttl=98 time=27.004 ms
+64 bytes from 64.233.185.102: icmp_seq=5 ttl=98 time=27.031 ms
+64 bytes from 64.233.185.102: icmp_seq=6 ttl=98 time=26.927 ms
+64 bytes from 64.233.185.102: icmp_seq=7 ttl=98 time=26.951 ms
+64 bytes from 64.233.185.102: icmp_seq=8 ttl=98 time=26.982 ms
+ps
+  PID TTY           TIME CMD
+ 6102 ttys000    0:00.02 -bash
+ 6377 ttys000    0:00.01 ping google.com
+ 6134 ttys001    0:00.02 -bash
+ 6325 ttys001    0:00.00 sleep 100
+MAC619967:~ eisne003$ 64 bytes from 64.233.185.102: icmp_seq=9 ttl=98 time=26.823 ms
+64 bytes from 64.233.185.102: icmp_seq=10 ttl=98 time=26.951 ms
+64 bytes from 64.233.185.102: icmp_seq=11 ttl=98 time=26.967 ms
+64 bytes from 64.233.185.102: icmp_seq=12 ttl=98 time=27.024 ms
+ki64 bytes from 64.233.185.102: icmp_seq=13 ttl=98 time=27.003 ms
+ll64 bytes from 64.233.185.102: icmp_seq=14 ttl=98 time=26.766 ms
+64 bytes from 64.233.185.102: icmp_seq=15 ttl=98 time=27.006 ms
+64 bytes from 64.233.185.102: icmp_seq=16 ttl=98 time=26.772 ms
+64 bytes from 64.233.185.102: icmp_seq=17 ttl=98 time=26.961 ms
+64 bytes from 64.233.185.102: icmp_seq=18 ttl=98 time=26.953 ms
+64 bytes from 64.233.185.102: icmp_seq=19 ttl=98 time=26.987 ms
+64 bytes from 64.233.185.102: icmp_seq=20 ttl=98 time=27.042 ms
+kill64 bytes from 64.233.185.102: icmp_seq=21 ttl=98 time=26.895 ms
+ 6364 bytes from 64.233.185.102: icmp_seq=22 ttl=98 time=26.961 ms
+77
+-bash: killkill: command not found
+MAC619967:~ eisne003$ 64 bytes from 64.233.185.102: icmp_seq=23 ttl=98 time=26.928 ms
+64 bytes from 64.233.185.102: icmp_seq=24 ttl=98 time=27.046 ms
+64 bytes from 64.233.185.102: icmp_seq=25 ttl=98 time=27.005 ms
+64 bytes from 64.233.185.102: icmp_seq=26 ttl=98 time=26.961 ms
+64 bytes from 64.233.185.102: icmp_seq=27 ttl=98 time=26.969 ms
+64 bytes from 64.233.185.102: icmp_seq=28 ttl=98 time=27.012 ms
+64 bytes from 64.233.185.102: icmp_seq=29 ttl=98 time=26.897 ms
+64 bytes from 64.233.185.102: icmp_seq=30 ttl=98 time=26.776 ms
+64 bytes from 64.233.185.102: icmp_seq=31 ttl=98 time=26.842 ms
+64 bytes from 64.233.185.102: icmp_seq=32 ttl=98 time=27.014 ms
+64 bytes from 64.233.185.102: icmp_seq=33 ttl=98 time=27.001 ms
+64 bytes from 64.233.185.102: icmp_seq=34 ttl=98 time=27.013 ms
+64 bytes from 64.233.185.102: icmp_seq=35 ttl=98 time=27.047 ms
+64 bytes from 64.233.185.102: icmp_seq=36 ttl=98 time=26.992 ms
+64 bytes from 64.233.185.102: icmp_seq=37 ttl=98 time=26.967 ms
+64 bytes from 64.233.185.102: icmp_seq=38 ttl=98 time=26.758 ms
+64 bytes from 64.233.185.102: icmp_seq=39 ttl=98 time=26.816 ms
+64 bytes from 64.233.185.102: icmp_seq=40 ttl=98 time=27.074 ms
+64 bytes from 64.233.185.102: icmp_seq=41 ttl=98 time=27.060 ms
+64 bytes from 64.233.185.102: icmp_seq=42 ttl=98 time=26.968 ms
+64 bytes from 64.233.185.102: icmp_seq=43 ttl=98 time=27.035 ms
+64 bytes from 64.233.185.102: icmp_seq=44 ttl=98 time=26.984 ms
+MAC619967:~ eisne003$ kill 6377
+MAC619967:~ eisne003$ kill 6395
+MAC619967:~ eisne003$ top
+MAC619967:~ eisne003$
+kill 6430

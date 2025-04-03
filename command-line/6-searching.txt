@@ -1,1 +1,54 @@
+Last login: Thu Apr  3 08:44:58 on ttys000
 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MAC619967:~ eisne003$ cd ~/Home/Student/e/eisne003/SP_repository
+-bash: cd: /Users/eisne003/Home/Student/e/eisne003/SP_repository: No such file or directory
+MAC619967:~ eisne003$ cd Home/Student/e/eisne003/SP_repository
+-bash: cd: Home/Student/e/eisne003/SP_repository: No such file or directory
+MAC619967:~ eisne003$ cd ~Home/Student/e/eisne003/SP_repository
+-bash: cd: ~Home/Student/e/eisne003/SP_repository: No such file or directory
+MAC619967:~ eisne003$ cd /Volumes/Home/Student/e/eisne003/SP_repository/python/project/ball.py
+-bash: cd: /Volumes/Home/Student/e/eisne003/SP_repository/python/project/ball.py: Not a directory
+MAC619967:~ eisne003$ cd /Volumes/Home/Student/e/eisne003/SP_repository/python/project
+MAC619967:project eisne003$ find . -name "ball.py"
+./ball.py
+MAC619967:project eisne003$ cd project
+-bash: cd: project: No such file or directory
+MAC619967:project eisne003$ grep "vpython" ball.py
+import vpython as vp
+MAC619967:project eisne003$ cd /Volumes/Home/Student/e/eisne003/SP_repository
+MAC619967:SP_repository eisne003$ find . -mtime -3
+./.git
+./.git/index
+./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+./.idea
+./.idea/workspace.xml
+./python/project
+./python/project/ball.py
+MAC619967:SP_repository eisne003$ cd /Volumes/Home/Student/e/eisne003/SP_repository/python
+MAC619967:python eisne003$ touch test1.py
+MAC619967:python eisne003$ touch test2.py
+MAC619967:python eisne003$ vi test1.py
+MAC619967:python eisne003$ vi test2.py
+MAC619967:python eisne003$ grep "import numpy" *.py
+test1.py:import numpy as np
+test2.py:import numpy as np
+MAC619967:python eisne003$ find . -name *.py | xargs grep "import numpy"
+find: test2.py: unknown primary or operator
+MAC619967:python eisne003$ find . -name "*.py" | xargs grep "import numpy"
+./array-computing/plot_trajectory.py:import numpy as np
+./dictionaries-and-strings/make_hertzsprung_russell_diagram.py:import numpy as np
+./project/ball.py:import numpy as np
+./project/freefall.py:import numpy as np
+./test1.py:import numpy as np
+./test2.py:import numpy as np
+MAC619967:python eisne003$ rm test1.py test2.py
+MAC619967:python eisne003$ ls
+array-computing			matrices
+computing-with-formulas		project
+dictionaries-and-strings	user-input
+functions-and-branching		vpython
+loops-and-lists
+MAC619967:python eisne003$

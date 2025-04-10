@@ -1,4 +1,5 @@
 # Concepts
-* text editor
+* Comment
 * Argument
-* shell
+* Scirpt
+* 

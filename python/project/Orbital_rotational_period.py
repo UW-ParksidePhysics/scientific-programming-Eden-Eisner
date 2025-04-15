@@ -56,9 +56,15 @@ def get_data():
     return planets_data
 
 
-def draw_sun():
-    plt.Circle((0,0),.25, color='k')
-    pass
+def draw_sun(ax, height):
+    sun = plt.Circle((0,0),radius=height/4, color='k', fill = False, lw = 3)
+    ax.add_patch(sun)
+    sun_dot = plt.Circle((0,0), radius=height/16, color="k")
+    ax.add_patch(sun_dot)
+
+    rect = plt.Rectangle((-size[0] / 2, -size[1] / 2), size[0], size[1], color='k', fill=False)
+    ax.add_patch(rect)
+    return
 
 
 def draw_planet(planet_name):
@@ -72,7 +78,9 @@ def draw_planet(planet_name):
 def draw_orbit_with_arrow(ellipse_axes, ellipse_color = 'k'):
     angle = np.linspace(0, 2*np.pi)
     plt.plot(ellipse_axes[0] *np.cos(angle), ellipse_axes[1] * np.sin(angle), color = ellipse_color)
-    pass
+
+    
+    return
 
 
 def draw_axis_with_arrow(axial_tilt, spin_period):
@@ -91,10 +99,10 @@ if __name__ == "__main__":
     reduced_data = {planet:data[planet]} # for testing specific planets
     for planet, planet_data in reduced_data.items():
         for size in sizes:
-            plt.subplots(figsize=size)
-            draw_sun()
+            figure, ax = plt.subplots(figsize=size)
+            draw_sun(ax, size[1])
+            draw_orbit_with_arrow([size[0]/(8/3),size[1]/(8/3)])
             draw_planet(planet)
-            draw_orbit_with_arrow([size[0]/2,size[1]/2])
             draw_axis_with_arrow(planet_data["axial_tilt_degrees"], planet_data["spin_period_hours"])
             draw_labels(planet_data)
 

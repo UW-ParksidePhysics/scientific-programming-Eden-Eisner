@@ -64,6 +64,7 @@ def draw_sun(ax, height):
 
     rect = plt.Rectangle((-size[0] / 2, -size[1] / 2), size[0], size[1], color='k', fill=False)
     ax.add_patch(rect)
+
     return
 
 
@@ -79,7 +80,7 @@ def draw_orbit_with_arrow(ellipse_axes, ellipse_color = 'k'):
     angle = np.linspace(0, 2*np.pi)
     plt.plot(ellipse_axes[0] *np.cos(angle), ellipse_axes[1] * np.sin(angle), color = ellipse_color)
 
-    
+
     return
 
 

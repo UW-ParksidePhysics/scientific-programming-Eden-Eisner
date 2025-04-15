@@ -7,7 +7,7 @@ make 1.5 and 3 inch tall version
 """
 from matplotlib import pyplot as plt
 import numpy as np
-#
+
 #### RENAME from project.py to (your_project_short_name).py
 # File structure
 # 1. Commented paragraph describing project ~ 100-200 words

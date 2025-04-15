@@ -64,7 +64,6 @@ def draw_sun(ax, height):
 
     rect = plt.Rectangle((-size[0] / 2, -size[1] / 2), size[0], size[1], color='k', fill=False)
     ax.add_patch(rect)
-
     return
 
 

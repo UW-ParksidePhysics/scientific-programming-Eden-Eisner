@@ -1,1 +1,20 @@
+MAC619967:~ eisne003$ vi test.txt
+MAC619967:~ eisne003$ vi test.py
+MAC619967:~ eisne003$ cat test.py
+def print_string(input_string, input_values):
+    print(input_string)
+    value_sum = sum(input_values)
+    return value_sum
 
+
+if __name__ == '__main__':
+    test_string = "Hello World"
+    test_values = [1,2,3]
+
+    test_sum = print_string(test_string, test_values)
+    print(f"The sum of {test_values} is {test_sum}")
+
+MAC619967:~ eisne003$ python3 test.py
+Hello World
+The sum of [1, 2, 3] is 6
+MAC619967:~ eisne003$

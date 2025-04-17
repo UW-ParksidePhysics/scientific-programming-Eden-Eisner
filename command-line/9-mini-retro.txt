@@ -1,17 +1,17 @@
-Partner:
+Partner: Dr Parker
 
 What Went Well
----
+--- Remember python syntax
 
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: Was pretty focused, didn't get distracted
 
-* Communication:
+* Communication: Typed what was told, and it worked, and remembered to repeat stuff
 
-* Pacing:
+* Pacing: Was good, didn't get stuck on anything
 
-* Division of responsibility
+* Division of responsibility: was equally spread
 
-* Code quality:
+* Code quality: Code ran without error on the first try

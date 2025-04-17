@@ -64,26 +64,31 @@ def draw_sun(ax, height):
 
     rect = plt.Rectangle((-size[0] / 2, -size[1] / 2), size[0], size[1], color='k', fill=False)
     ax.add_patch(rect)
+
     return
 
 
-def draw_planet(planet_name):
+def draw_planet(planet_name, ellipse_axes):
     from astronomical_symbols import astronomical_symbols
 
+    planet = plt.Circle((ellipse_axes[0]/(8/3),0), radius=(ellipse_axes[1]/6), fc="white", ec="k", lw=2, zorder = 3)
+    ax = plt.gca()
+    ax.add_patch(planet)
 
-    print(astronomical_symbols[planet_name])
-    pass
+    plt.text(ellipse_axes[0]/(8/3),0, "test", color="k")
+    return
 
 
 def draw_orbit_with_arrow(ellipse_axes, ellipse_color = 'k'):
     angle = np.linspace(0, 2*np.pi)
     plt.plot(ellipse_axes[0] *np.cos(angle), ellipse_axes[1] * np.sin(angle), color = ellipse_color)
 
-
+    arrow_length = ellipse_axes[1]/4.5
+    plt.arrow(-arrow_length*(1/3),-ellipse_axes[1],0.00001,0, head_width=arrow_length, head_length=arrow_length, fc = "k")
     return
 
 
-def draw_axis_with_arrow(axial_tilt, spin_period):
+def draw_tilt_with_arrow(axial_tilt, spin_period):
     print(axial_tilt, spin_period)
     return
 
@@ -102,8 +107,8 @@ if __name__ == "__main__":
             figure, ax = plt.subplots(figsize=size)
             draw_sun(ax, size[1])
             draw_orbit_with_arrow([size[0]/(8/3),size[1]/(8/3)])
-            draw_planet(planet)
-            draw_axis_with_arrow(planet_data["axial_tilt_degrees"], planet_data["spin_period_hours"])
+            draw_planet(planet,size)
+            draw_tilt_with_arrow(planet_data["axial_tilt_degrees"], planet_data["spin_period_hours"])
             draw_labels(planet_data)
 
 

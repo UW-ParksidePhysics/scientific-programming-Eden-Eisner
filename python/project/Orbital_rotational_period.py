@@ -75,7 +75,7 @@ def draw_planet(planet_name, ellipse_axes):
     ax = plt.gca()
     ax.add_patch(planet)
 
-    plt.text(ellipse_axes[0]/(8/3),0, "test", color="k")
+    #plt.text(ellipse_axes[0]/(8/3),0, planet_name, color="k", fontsize=((ellipse_axes[1]/6)*20))
     return
 
 
@@ -88,8 +88,28 @@ def draw_orbit_with_arrow(ellipse_axes, ellipse_color = 'k'):
     return
 
 
-def draw_tilt_with_arrow(axial_tilt, spin_period):
-    print(axial_tilt, spin_period)
+def draw_tilt_with_arrow(axial_tilt, spin_period, ellipse_axes):
+    length = ellipse_axes[1]/2  # Total length of the axis
+
+    # Convert tilt angle to radians
+    tilt_rad = np.radians(axial_tilt)
+
+    # Planet center
+    center_x = ellipse_axes[0] / (8 / 3)
+    center_y = 0
+
+    # Half-length to draw equally in both directions
+    dx = (length / 2) * np.sin(tilt_rad)
+    dy = (length / 2) * np.cos(tilt_rad)
+
+    # Start and end points of the line (through the center)
+    start_x = center_x - dx
+    start_y = center_y - dy
+    end_x = center_x + dx
+    end_y = center_y + dy
+
+    # Draw the axis of rotation line
+    plt.plot([start_x, end_x], [start_y, end_y], color='red', linewidth=2)
     return
 
 
@@ -108,7 +128,7 @@ if __name__ == "__main__":
             draw_sun(ax, size[1])
             draw_orbit_with_arrow([size[0]/(8/3),size[1]/(8/3)])
             draw_planet(planet,size)
-            draw_tilt_with_arrow(planet_data["axial_tilt_degrees"], planet_data["spin_period_hours"])
+            draw_tilt_with_arrow(planet_data["axial_tilt_degrees"], planet_data["spin_period_hours"], size)
             draw_labels(planet_data)
 
 

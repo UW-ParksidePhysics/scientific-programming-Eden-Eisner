@@ -109,7 +109,10 @@ def draw_tilt_with_arrow(axial_tilt, spin_period, ellipse_axes):
     end_y = center_y + dy
 
     # Draw the axis of rotation line
-    plt.plot([start_x, end_x], [start_y, end_y], color='red', linewidth=2)
+    plt.plot([start_x, end_x], [start_y, end_y], color='k', linewidth=1.5, zorder=4)
+
+    #the arrow shing the rotation direction
+
     return
 
 

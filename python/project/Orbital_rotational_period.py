@@ -60,28 +60,28 @@ def draw_orbit_with_arrow(ellipse_axes, ellipse_color = 'k'):
 
 def draw_tilt_with_arrow(axial_tilt, spin_period, ellipse_axes):
     length = ellipse_axes[1] / 2
-    tilt_rad = np.radians(axial_tilt)
+    tilt_radian = np.radians(axial_tilt)
 
     center_x = ellipse_axes[0] / (8 / 3)
     center_y = 0
 
-    dx = (length / 2) * np.sin(tilt_rad)
-    dy = (length / 2) * np.cos(tilt_rad)
+    dx = (length / 2) * np.sin(tilt_radian)
+    dy = (length / 2) * np.cos(tilt_radian)
 
     start_x = center_x - dx
     start_y = center_y - dy
     end_x = center_x + dx
     end_y = center_y + dy
 
-    plt.plot([start_x, end_x], [start_y, end_y], color='k', linewidth=1.5, zorder=4)
+    plt.plot([start_x, end_x], [start_y, end_y], color='k', linewidth=1.5, zorder=2)
 
-    arc_radius = 0.15 * length
+    arc_radians = 0.15 * length
     theta1 = 170
     theta2 = 370
 
     # Draw arc
     arc = Arc((center_x, center_y),
-              width=2 * arc_radius, height=2 * arc_radius,
+              width=2 * arc_radians, height=2 * arc_radians,
               angle=-axial_tilt,
               theta1=theta1, theta2=theta2,
               color='k', linewidth=1.5, zorder=4)
@@ -89,34 +89,34 @@ def draw_tilt_with_arrow(axial_tilt, spin_period, ellipse_axes):
 
     # Choose which end of arc to use for arrow
     theta = theta2 if spin_period >= 0 else theta1
-    theta_rad = np.radians(theta)
+    theta_radian = np.radians(theta)
 
     # Get arc endpoint in arc's local coordinate frame
-    x_arc = arc_radius * np.cos(theta_rad)
-    y_arc = arc_radius * np.sin(theta_rad)
+    x_arc = arc_radians * np.cos(theta_radian)
+    y_arc = arc_radians * np.sin(theta_radian)
 
     # Rotate endpoint by -axial_tilt to match figure orientation
-    x_rot = x_arc * np.cos(-tilt_rad) - y_arc * np.sin(-tilt_rad)
-    y_rot = x_arc * np.sin(-tilt_rad) + y_arc * np.cos(-tilt_rad)
+    x_rotation = x_arc * np.cos(-tilt_radian) - y_arc * np.sin(-tilt_radian)
+    y_rotation = x_arc * np.sin(-tilt_radian) + y_arc * np.cos(-tilt_radian)
 
-    arrow_x = center_x + x_rot
-    arrow_y = center_y + y_rot
+    arrow_x = center_x + x_rotation
+    arrow_y = center_y + y_rotation
 
     # Compute tangent direction at arrow location and rotate it
-    dx_tangent = -np.sin(theta_rad)
-    dy_tangent = np.cos(theta_rad)
-    dx_rot = (dx_tangent * np.cos(-tilt_rad) - dy_tangent * np.sin(-tilt_rad))
-    dy_rot = (dx_tangent * np.sin(-tilt_rad) + dy_tangent * np.cos(-tilt_rad))
+    dx_tangent = -np.sin(theta_radian)
+    dy_tangent = np.cos(theta_radian)
+    dx_rotation = (dx_tangent * np.cos(-tilt_radian) - dy_tangent * np.sin(-tilt_radian))
+    dy_rotation = (dx_tangent * np.sin(-tilt_radian) + dy_tangent * np.cos(-tilt_radian))
 
     if spin_period <= 0:
-        dx_rot = -dx_rot
-        dy_rot = -dy_rot
+        dx_rotation = -dx_rotation
+        dy_rotation = -dy_rotation
 
     arrow_length = ellipse_axes[1] / 25
     plt.arrow(
-        arrow_x - dx_rot * arrow_length / 2,
-        arrow_y - dy_rot * arrow_length / 2,
-        dx_rot * 0.00001, dy_rot * 0.00001,  # effectively no shaft, just head
+        arrow_x - dx_rotation * arrow_length / 2,
+        arrow_y - dy_rotation * arrow_length / 2,
+        dx_rotation * 0.00001, dy_rotation * 0.00001,  # effectively no shaft, just head
         head_width=arrow_length,
         head_length=arrow_length,
         color='k',
@@ -176,7 +176,7 @@ if __name__ == "__main__":
     data = get_data()
     planet = "Earth"
     reduced_data = {planet:data[planet]} # for testing specific planets
-    for planet, planet_data in data.items():
+    for planet, planet_data in reduced_data.items():
         for size in sizes:
             figure, ax = plt.subplots(figsize=size)
             draw_sun(size[1])

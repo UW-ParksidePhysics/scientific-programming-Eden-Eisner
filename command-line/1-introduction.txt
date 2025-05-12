@@ -1,1 +1,34 @@
+Last login: Thu May  1 08:06:26 on ttys000
 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MAC619967:~ eisne003$ pwd
+/Users/eisne003
+MAC619967:~ eisne003$ cd Downloads
+MAC619967:Downloads eisne003$ ls
+pycharm-professional-2024.3.2-aarch64.dmg
+pycharm-professional-2024.3.3-aarch64.dmg
+python-3.13.2-macos11.pkg
+MAC619967:Downloads eisne003$ pwd
+/Users/eisne003/Downloads
+MAC619967:Downloads eisne003$ cd Home
+-bash: cd: Home: No such file or directory
+MAC619967:Downloads eisne003$ cd home
+-bash: cd: home: No such file or directory
+MAC619967:Downloads eisne003$ cd main
+-bash: cd: main: No such file or directory
+MAC619967:Downloads eisne003$ cd eisne003
+-bash: cd: eisne003: No such file or directory
+MAC619967:Downloads eisne003$ cd /Users/eisne003
+MAC619967:~ eisne003$ pwd
+/Users/eisne003
+MAC619967:~ eisne003$ cd /Volumes/Home/Student/e/eisne003/SP_repository
+MAC619967:SP_repository eisne003$ pwd
+/Volumes/Home/Student/e/eisne003/SP_repository
+MAC619967:SP_repository eisne003$ ls
+README.md	command-line	python
+MAC619967:SP_repository eisne003$ cd /Users/eisne003
+MAC619967:~ eisne003$ pwd
+/Users/eisne003
+MAC619967:~ eisne003$

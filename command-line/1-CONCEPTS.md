@@ -1,2 +1,4 @@
 # Concepts
+* redirection
+* scrpit
 * 

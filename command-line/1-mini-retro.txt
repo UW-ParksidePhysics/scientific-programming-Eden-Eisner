@@ -1,17 +1,17 @@
-Partner:
+Partner: Carter
 
 What Went Well
----
+--- moving between the directories
 
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: was focus, didn't get distracted
 
-* Communication:
+* Communication: was great
 
-* Pacing:
+* Pacing: was good, no distractions
 
-* Division of responsibility
+* Division of responsibility: was split evenly
 
-* Code quality:
+* Code quality: Good

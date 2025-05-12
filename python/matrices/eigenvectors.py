@@ -16,3 +16,4 @@ print(f'x-vector: {eigenvectors}\n')
 
 for eigenvalue, eigenvector in zip(eigenvalues, eigenvectors.transpose()):
     print(f'λ = {eigenvalue}, x-vector = {eigenvector}\n')
+

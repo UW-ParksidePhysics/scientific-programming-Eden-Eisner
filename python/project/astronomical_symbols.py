@@ -22,4 +22,5 @@ astronomical_symbols = dict(Sun='☉',
                             Aquarius='♒',
                             Pisces='♓',
                             Ceres='⚳',
-                            Pallas='⚴')
+                            Pallas='⚴',
+                            Pluto='⯓')
